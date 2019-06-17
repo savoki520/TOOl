@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>项目后台管理</title>
+    <script src="../js/rem.js"></script>
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+    <header class="admin_header" onclick="retu()">
+        <div class="admin_return">
+            <img src="img/admin/admin_return.png">
+            返回
+        </div>
+        <div class="admin_header_title">邀请有礼</div>
+    </header>
+    <section class="admin_content">
+        <!--one为一级选项卡卡，two为活动二级选项卡，three为核销二级选项卡-->
+        <div class="admin_content_one">
+            <div class="admin_content_one_item admin_activity">
+                <div class="admin_content_one_item_small admin_content_one_item_add">活动</div>
+            </div>
+            <div class="admin_content_one_item admin_writeoff">
+                <div class="admin_content_one_item_small">核销</div>
+            </div>
+        </div>
+        <div class="admin_content_two">
+            <div class="admin_content_two_item">
+                <div class="admin_content_two_item_small admin_content_two_item_add">进行中</div>
+            </div>
+            <div class="admin_content_two_item">
+                <div class="admin_content_two_item_small">已结束</div>
+            </div>
+        </div>
+        <div class="admin_content_three">
+            <div class="admin_content_three_item">
+                <div class="admin_content_three_item_small admin_content_three_item_add">未核销</div>
+            </div>
+            <div class="admin_content_three_item">
+                <div class="admin_content_three_item_small">已核销</div>
+            </div>
+        </div>
+    </section>
+    <section class="admin_body">
+        <!--body_content为活动列表,admin_coupon为优惠券列表-->
+        <div class="admin_body_content">
+            <!--item为活动列表-->
+            <!--<div class="admin_body_content_item">-->
+                <!--<div class="admin_body_content_item_one">-->
+                    <!--<div class="admin_body_content_item_back">金</div>-->
+                <!--</div>-->
+                <!--<div class="admin_body_content_item_two">-->
+                    <!--<div class="admin_body_content_item_two_title">金龙鱼调和油大篷车活动</div>-->
+                    <!--<div class="admin_body_content_item_two_font">获奖人数: <span>21</span></div>-->
+                    <!--<div class="admin_body_content_item_two_font">参与人数: <span>21</span></div>-->
+                    <!--<div class="admin_body_content_item_two_font">点击次数: <span>21</span></div>-->
+                <!--</div>-->
+                <!--<div class="admin_body_content_item_three">-->
+                    <!--<div class="admin_body_content_item_three_status">进行中</div>-->
+                    <!--<div class="admin_body_content_item_three_time">2016.02.01-2019.03.08</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="admin_body_content_item">-->
+                <!--<div class="admin_body_content_item_one">-->
+                    <!--<div class="admin_body_content_item_back">金</div>-->
+                <!--</div>-->
+                <!--<div class="admin_body_content_item_two">-->
+                    <!--<div class="admin_body_content_item_two_title">金龙鱼调和油大篷车活动</div>-->
+                    <!--<div class="admin_body_content_item_two_font">获奖人数21人</div>-->
+                    <!--<div class="admin_body_content_item_two_font">参与人数21人</div>-->
+                    <!--<div class="admin_body_content_item_two_font">点击次数21次</div>-->
+                <!--</div>-->
+                <!--<div class="admin_body_content_item_three">-->
+                    <!--<div class="admin_body_content_item_three_status item_three_end">已结束</div>-->
+                    <!--<div class="admin_body_content_item_three_time">2016.02.01-2019.03.08</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="admin_body_content_no">暂无活动</div>-->
+        </div>
+        <div class="admin_coupon">
+            <!--item为优惠券列表-->
+            <!--<div class="admin_coupon_item">-->
+                <!--<div class="admin_coupon_item_one">-->
+                    <!--<div class="admin_coupon_item_one_img">-->
+                        <!--<img src="img/admin/avatar.png">-->
+                    <!--</div>-->
+                    <!--<div class="admin_coupon_item_one_name">浅川下的少年</div>-->
+                <!--</div>-->
+                <!--<div class="admin_coupon_item_two">-->
+                    <!--<div class="admin_coupon_item_two_title">中粮大米地推活动</div>-->
+                    <!--<div class="admin_coupon_item_two_cdk">CDK：566854964</div>-->
+                    <!--<div class="admin_coupon_item_two_time">有效期至：2019.0308</div>-->
+                <!--</div>-->
+                <!--<div class="admin_coupon_item_three">-->
+                    <!--<div class="admin_coupon_item_three_status">兑换</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="admin_coupon_item">-->
+                <!--<div class="admin_coupon_item_one">-->
+                    <!--<div class="admin_coupon_item_one_img">-->
+                        <!--<img src="img/admin/avatar.png">-->
+                    <!--</div>-->
+                    <!--<div class="admin_coupon_item_one_name">浅川下的少年</div>-->
+                <!--</div>-->
+                <!--<div class="admin_coupon_item_two">-->
+                    <!--<div class="admin_coupon_item_two_title">中粮大米地推活动</div>-->
+                    <!--<div class="admin_coupon_item_two_cdk">CDK：566854964</div>-->
+                    <!--<div class="admin_coupon_item_two_time">有效期至：2019.0308</div>-->
+                <!--</div>-->
+                <!--<div class="admin_coupon_item_three">-->
+                    <!--<div class="admin_coupon_item_three_status item_three_end"-->
+                         <!--onclick="writeoff($('.admin_coupon_item_three_status').index(this))">已兑换</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="admin_coupon_no">暂无优惠券</div>-->
+        </div>
+    </section>
+    <div class="admin_writebox">
+        <div class="admin_write">
+            <div class="admin_write_font">是否确定核销优惠券</div>
+            <div class="admin_write_button">
+                <div class="admin_write_ok" onclick="writeoff_ok()">确定</div>
+                <div class="admin_write_canel">取消</div>
+            </div>
+        </div>
+    </div>
+    <footer class="admin_footer">创建活动</footer>
+</body>
+<script src="../js/jquery.js"></script>
+<script src="js/admin.js"></script>
+<script>
+    localStorage.setItem('key','admin');
+    //监听返回按钮，退出微信浏览器事件
+    window.addEventListener("popstate", function(e) {
+        WeixinJSBridge.call('closeWindow');
+    }, false);
+</script>
+</html>

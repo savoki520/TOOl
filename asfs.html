@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-2.2.3.min.js"></script>
+</head>
+<body>
+
+<div class="dd" style="width: 200px;height: 200px;background: cyan"></div>
+</body>
+<script>
+//    b
+    var str = '45↵8';
+    console.log(str);
+//    for(var i = 0;i<str.length;i++){
+//        if(str[i] === '↵'){
+//            $(".dd").after('<br/>')
+//        }
+//        $(".dd").text(str)
+//    }
+$(".dd").text(str);
+
+var result = "";
+var c;
+for (i = 0; i < str.length; i++) {
+    c = str.substr(i, 1);
+    console.log(c);
+    if ( c === "\n")
+    {
+        console.log('d')
+        result = result + "</br>";
+    }
+
+    else if (c === "\r")
+        result = result + c;
+    else if(c === '↵')
+    {
+        console.log('进来了')
+        result = result + "</br>";
+    }
+    else {
+        result = result + c;
+    }
+}
+console.log(result);
+//$(".dd").text(result).html("</br>")
+
+
+//    $(".dd").text('<br/>' + '阿萨德刚');
+//    $(".dd").text('阿萨德刚')
+</script>
+</html>

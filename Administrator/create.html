@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>创建活动</title>
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/mui.picker.min.css">
+    <link rel="stylesheet" href="css/mui.min.css">
+    <script src="js/mui.min.js"></script>
+    <script src="js/mui.picker.min.js"></script>
+    <script src="../js/rem.js"></script>
+</head>
+<body style="background: rgba(255,255,255,1); overflow: scroll !important; -webkit-overflow-scrolling: touch !important;">
+    <header class="create_header">
+        <div class="create_return">
+            <img src="img/admin/admin_return.png">
+            返回
+        </div>
+    </header>
+    <section class="create_content">
+        <div class="create_content_one">
+            <div class="create_content_one_title">活动名称<span>*</span></div>
+            <input type="text" class="create_content_input" id="activitname">
+        </div>
+        <div class="create_content_two">
+            <div class="create_content_two_title">活动时间<span>*</span></div>
+            <div class="create_time">
+                <span id="time_one" class="time_item">
+                    <span class="time_begin">2019-05-27</span>
+                </span>
+                <span class="time_line"></span>
+                <span id="time_two" class="time_item"></span>
+            </div>
+            <div class="create_content_two_duration">活动持续时间 <span class="create_content_two_dr">0天</span></div>
+        </div>
+        <div class="create_content_three">
+            <div class="create_content_three_unitname">单位名称<span>*</span></div>
+            <input type="text" class="create_content_three_input" id="shopname">
+        </div>
+        <div class="create_content_three">
+            <div class="create_content_three_unitname">单位地址<span>*</span></div>
+            <input type="text" class="create_content_three_input" id="shopaddress">
+        </div>
+        <div class="create_content_three">
+            <div class="create_content_three_unitname">联系方式<span>*</span></div>
+            <input type="text" class="create_content_three_input" id="tel" onchange="change($(this),0)" maxlength="11" minlength="11">
+        </div>
+        <div class="create_content_three">
+            <div class="create_content_three_unitname">兑奖地点<span>*</span></div>
+            <input type="text" class="create_content_three_input" id="getpriceaddress">
+        </div>
+        <div class="create_content_four">
+            <div class="create_content_four_title">活动规则<span>*</span></div>
+            <div class="create_content_four_content">参与者可自行创建队伍或加入他人创建的队伍，每人
+                最多加入3个队伍，每个队伍满员后等待开奖，开奖
+                后可立即抽奖。
+                兑奖时间：无期限 兑奖地点：XXXXXX(根据上方填写) 兑奖须知：凭核销码线下领取奖品</div>
+        </div>
+        <div class="create_content_five">
+            <div class="create_content_five_title">活动介绍<span>*</span></div>
+            <textarea class="create_content_five_textarea"></textarea>
+            <div class="word">
+                <span class="word_count">0</span>
+                <span class="word_remain">/150</span>
+            </div>
+        </div>
+        <div class="create_content_six">
+            <div class="create_content_six_titlebox">
+                <span class="create_content_six_titleone">队员人数选择<span>*</span></span>
+                <span class="create_content_six_titletwo">抵扣券金额设置<span>*</span></span>
+                <span class="create_content_six_titlethree">抵扣券张数设置<span>*</span></span>
+            </div>
+            <div class="create_content_six_content">
+                <div class="create_content_six_item create_content_six_item_add">
+                    <div class="create_content_six_item_one">
+                        <input type="radio" checked class="six_item_radio" name="six">
+                        <span>2人</span>
+                    </div>
+                    <div class="create_content_six_item_lineone"></div>
+                    <div class="create_content_six_item_two">
+                        <input class="item_input" type="text" onchange="change($(this))">
+                        <div>元 抵扣券</div>
+                    </div>
+                    <div class="create_content_six_item_linetwo"></div>
+                    <div class="create_content_six_item_three">
+                        <input type="text" class="item_input" onchange="change($(this))">
+                        <div>张</div>
+                    </div>
+                </div>
+                <div class="create_content_six_item">
+                    <div class="create_content_six_item_one">
+                        <input type="radio" class="six_item_radio" name="six">
+                        <span>3人</span>
+                    </div>
+                    <div class="create_content_six_item_lineone"></div>
+                    <div class="create_content_six_item_two">
+                        <input type="text" class="item_input" onchange="change($(this))">
+                        <div>元 抵扣券</div>
+                    </div>
+                    <div class="create_content_six_item_linetwo"></div>
+                    <div class="create_content_six_item_three">
+                        <input type="text" class="item_input" onchange="change($(this))">
+                        <div>张</div>
+                    </div>
+                </div>
+                <div class="create_content_six_item ">
+                    <div class="create_content_six_item_one">
+                        <input type="radio" class="six_item_radio" name="six">
+                        <span>4人</span>
+                    </div>
+                    <div class="create_content_six_item_lineone"></div>
+                    <div class="create_content_six_item_two">
+                        <input type="text" class="item_input" onchange="change($(this))">
+                        <div>元 抵扣券</div>
+                    </div>
+                    <div class="create_content_six_item_linetwo"></div>
+                    <div class="create_content_six_item_three">
+                        <input type="text" class="item_input" onchange="change($(this))">
+                        <div>张</div>
+                    </div>
+                </div>
+                <div class="create_content_six_item">
+                    <div class="create_content_six_item_one">
+                        <input type="radio" class="six_item_radio" name="six">
+                        <span>5人</span>
+                    </div>
+                    <div class="create_content_six_item_lineone"></div>
+                    <div class="create_content_six_item_two">
+                        <input type="text" class="item_input" onchange="change($(this))">
+                        <div>元 抵扣券</div>
+                    </div>
+                    <div class="create_content_six_item_linetwo"></div>
+                    <div class="create_content_six_item_three">
+                        <input type="text" class="item_input" onchange="change($(this))">
+                        <div>张</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="create_content_seven">
+            <div class="create_content_seven_title">单人获奖次数设置<span>*</span></div>
+            <div class="create_content_seven_content">
+                <div>单人获奖</div>
+                <input type="text" id="createnumber" onchange="change($(this))">
+                <div>次</div>
+            </div>
+            <div class="create_content_seven_remarks">备注：单人可以获奖的次数*</div>
+        </div>
+        <div class="create_content_nine">
+            <div class="create_content_nine_title">插入二维码<span>*</span></div>
+            <div class="create_content_nine_box">
+                <!--<form id="imgfilebox">-->
+                <form id="imgfilebox" enctype="multipart/form-data">
+                    <input type="file" name="uploadFile" id="uploadFile" class="create_content_nine_input" onchange="img_upload()">
+                </form>
+                <label class="create_content_nine_label">选择文件</label>
+            </div>
+            <div class="create_content_nine_img">
+                <img class="img_url">
+            </div>
+        </div>
+        <div class="create_content_eight">
+            <div class="create_content_eight_box">
+                <div class="create_content_eight_cancel">取消</div>
+                <div class="create_content_eight_ok">确认</div>
+            </div>
+        </div>
+    </section>
+    <script src="../js/jquery.js"></script>
+    <!--<script src="js/admin.js"></script>-->
+    <script>
+        $(".create_content_eight_ok").click(function () {
+            var activeContent = $(".create_content_five_textarea").val().replace(/\n/g,"<br/>");
+            console.log(activeContent);
+        })
+
+        localStorage.setItem('key','create');
+        //监听返回按钮，退出微信浏览器事件
+        window.addEventListener("popstate", function(e) {
+            WeixinJSBridge.call('closeWindow');
+        }, false);
+    </script>
+</body>
+</html>
